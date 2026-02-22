@@ -1,213 +1,232 @@
-Welcome to your new TanStack Start app! 
+<div align="center">
 
-# Getting Started
+<img src="./public/tanstack-circle-logo.png" alt="TanStack Logo" width="80" />
 
-To run this application:
+# ✨ TanStack Landing Page
+
+A modern, responsive, and beautifully crafted landing page built with **TanStack Start**, **React 19**, **Tailwind CSS v4**, and **Shadcn UI**.
+
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev)
+[![TanStack](https://img.shields.io/badge/TanStack-Start-FF4154?style=for-the-badge&logo=reactquery&logoColor=white)](https://tanstack.com/start)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Shadcn UI](https://img.shields.io/badge/Shadcn_UI-Latest-000000?style=for-the-badge&logo=shadcnui&logoColor=white)](https://ui.shadcn.com)
+[![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vite.dev)
+
+[🌐 Live Demo](https://github.com/Aswinsaipalakonda/tanstack-page) · [🐛 Report Bug](https://github.com/Aswinsaipalakonda/tanstack-page/issues) · [✨ Request Feature](https://github.com/Aswinsaipalakonda/tanstack-page/issues)
+
+</div>
+
+---
+
+## 📸 Preview
+
+> 🚧 _Add a screenshot or GIF of your landing page here!_
+>
+> ```
+> ![Landing Page Preview](./public/preview.png)
+> ```
+
+---
+
+## 🚀 Features
+
+| Feature                     | Description                                                           |
+| --------------------------- | --------------------------------------------------------------------- |
+| 🎨 **Modern UI**            | Stunning hero section with animated text effects & motion transitions |
+| 🌙 **Dark/Light Mode**      | Seamless theme toggling with persistent storage                       |
+| 📱 **Fully Responsive**     | Looks perfect on mobile, tablet, and desktop                          |
+| ⚡ **Blazing Fast**         | Powered by Vite 7 + TanStack Start for optimal performance            |
+| 🧩 **Shadcn Components**    | Beautiful, accessible UI components out of the box                    |
+| 🎭 **Framer Motion**        | Smooth, spring-based animations throughout                            |
+| 📦 **Modular Architecture** | Clean, component-based structure for easy customization               |
+| 🔍 **SEO Optimized**        | Meta tags, semantic HTML, and proper heading hierarchy                |
+
+---
+
+## 🏗️ Sections
+
+- 🏠 **Hero Section** — Animated headline with CTA buttons & background effects
+- 📝 **About / Content** — Company overview with testimonials
+- ⭐ **Features** — Six feature cards with icons & color-coded borders
+- 📅 **Timeline / Process** — Step-by-step workflow with versioned entries
+- 🔗 **App Integrations** — Partner/integration showcase
+- 💰 **Pricing** — Three-tier pricing cards (Free, Pro, Startup)
+- 📧 **Call to Action** — Email subscription form
+- 📬 **Contact** — Full contact form with company details
+- 🔻 **Footer** — Navigation links & social media icons
+
+---
+
+## 🛠️ Tech Stack
+
+```
+📦 tanstack-page
+├── ⚛️  React 19          — UI library
+├── 🔀  TanStack Router   — File-based routing
+├── 🚀  TanStack Start    — Full-stack framework
+├── 🎨  Tailwind CSS v4   — Utility-first styling
+├── 🧩  Shadcn UI         — Component library
+├── 🎭  Motion (Framer)   — Animation library
+├── 📐  TypeScript 5.7    — Type safety
+├── ⚡  Vite 7            — Build tool
+└── 🧪  Vitest            — Testing framework
+```
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+├── assets/
+│   ├── images/              # Static images (backgrounds, screenshots)
+│   └── svg/                 # SVG components (logo)
+├── components/
+│   ├── ui/                  # Shadcn UI components (button, card, etc.)
+│   ├── shadcn-studio/       # Block components (features, timeline, integrations)
+│   ├── header.tsx           # Navigation bar with mobile menu
+│   ├── hero-section.tsx     # Animated hero with CTA
+│   ├── content.tsx          # About section
+│   ├── pricing.tsx          # Pricing cards
+│   ├── contact.tsx          # Contact form
+│   ├── call-to-action.tsx   # CTA section
+│   ├── footer.tsx           # Footer with social links
+│   ├── theme-provider.tsx   # Dark/Light mode context
+│   ├── mode-toggle.tsx      # Theme toggle button
+│   └── logo.tsx             # Site logo
+├── lib/
+│   └── utils.ts             # Utility functions (cn)
+├── routes/
+│   ├── __root.tsx           # Root layout (meta, head, scripts)
+│   └── index.tsx            # Home page (all sections assembled)
+└── styles.css               # Global styles + Tailwind config
+```
+
+---
+
+## ⚡ Quick Start
+
+### Prerequisites
+
+- **Node.js** ≥ 18
+- **npm** or **pnpm**
+
+### Installation
 
 ```bash
+# 1️⃣ Clone the repository
+git clone https://github.com/Aswinsaipalakonda/tanstack-page.git
+
+# 2️⃣ Navigate into the project
+cd tanstack-page
+
+# 3️⃣ Install dependencies
 npm install
+
+# 4️⃣ Start the development server
 npm run dev
 ```
 
-# Building For Production
+The app will be running at **[http://localhost:3000](http://localhost:3000)** 🎉
 
-To build this application for production:
+---
 
-```bash
-npm run build
-```
+## 📜 Available Scripts
 
-## Testing
+| Script         | Command           | Description                           |
+| -------------- | ----------------- | ------------------------------------- |
+| 🚀 **Dev**     | `npm run dev`     | Start development server on port 3000 |
+| 🏗️ **Build**   | `npm run build`   | Create production build               |
+| 👁️ **Preview** | `npm run preview` | Preview the production build          |
+| 🧪 **Test**    | `npm run test`    | Run tests with Vitest                 |
+| 🔍 **Lint**    | `npm run lint`    | Run ESLint checks                     |
+| 💅 **Format**  | `npm run format`  | Check formatting with Prettier        |
+| ✅ **Check**   | `npm run check`   | Fix formatting & linting issues       |
 
-This project uses [Vitest](https://vitest.dev/) for testing. You can run the tests with:
+---
 
-```bash
-npm run test
-```
+## 🧩 Adding Shadcn Components
 
-## Styling
-
-This project uses [Tailwind CSS](https://tailwindcss.com/) for styling.
-
-### Removing Tailwind CSS
-
-If you prefer not to use Tailwind CSS:
-
-1. Remove the demo pages in `src/routes/demo/`
-2. Replace the Tailwind import in `src/styles.css` with your own styles
-3. Remove `tailwindcss()` from the plugins array in `vite.config.ts`
-4. Uninstall the packages: `npm install @tailwindcss/vite tailwindcss -D`
-
-## Linting & Formatting
-
-
-This project uses [eslint](https://eslint.org/) and [prettier](https://prettier.io/) for linting and formatting. Eslint is configured using [tanstack/eslint-config](https://tanstack.com/config/latest/docs/eslint). The following scripts are available:
+This project supports multiple Shadcn registries:
 
 ```bash
-npm run lint
-npm run format
-npm run check
+# Default Shadcn UI components
+npx shadcn@latest add button
+
+# Shadcn Studio blocks
+npx shadcn@latest add @ss-blocks/hero-section
+
+# Tailark components
+npx shadcn@latest add @tailark/header
 ```
 
+---
 
-## Shadcn
+## 🎨 Customization
 
-Add components using the latest version of [Shadcn](https://ui.shadcn.com/).
+### 🎨 Theme Colors
 
-```bash
-pnpm dlx shadcn@latest add button
-```
+Edit the CSS variables in `src/styles.css` under `:root` (light) and `.dark` (dark):
 
-
-
-## Routing
-
-This project uses [TanStack Router](https://tanstack.com/router) with file-based routing. Routes are managed as files in `src/routes`.
-
-### Adding A Route
-
-To add a new route to your application just add a new file in the `./src/routes` directory.
-
-TanStack will automatically generate the content of the route file for you.
-
-Now that you have two routes you can use a `Link` component to navigate between them.
-
-### Adding Links
-
-To use SPA (Single Page Application) navigation you will need to import the `Link` component from `@tanstack/react-router`.
-
-```tsx
-import { Link } from "@tanstack/react-router";
-```
-
-Then anywhere in your JSX you can use it like so:
-
-```tsx
-<Link to="/about">About</Link>
-```
-
-This will create a link that will navigate to the `/about` route.
-
-More information on the `Link` component can be found in the [Link documentation](https://tanstack.com/router/v1/docs/framework/react/api/router/linkComponent).
-
-### Using A Layout
-
-In the File Based Routing setup the layout is located in `src/routes/__root.tsx`. Anything you add to the root route will appear in all the routes. The route content will appear in the JSX where you render `{children}` in the `shellComponent`.
-
-Here is an example layout that includes a header:
-
-```tsx
-import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
-
-export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'My App' },
-    ],
-  }),
-  shellComponent: ({ children }) => (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        <header>
-          <nav>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-          </nav>
-        </header>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  ),
-})
-```
-
-More information on layouts can be found in the [Layouts documentation](https://tanstack.com/router/latest/docs/framework/react/guide/routing-concepts#layouts).
-
-## Server Functions
-
-TanStack Start provides server functions that allow you to write server-side code that seamlessly integrates with your client components.
-
-```tsx
-import { createServerFn } from '@tanstack/react-start'
-
-const getServerTime = createServerFn({
-  method: 'GET',
-}).handler(async () => {
-  return new Date().toISOString()
-})
-
-// Use in a component
-function MyComponent() {
-  const [time, setTime] = useState('')
-  
-  useEffect(() => {
-    getServerTime().then(setTime)
-  }, [])
-  
-  return <div>Server time: {time}</div>
+```css
+:root {
+  --primary: oklch(0.21 0.006 285.885);
+  --background: oklch(1 0 0);
+  /* ... other colors */
 }
 ```
 
-## API Routes
+### 🖋️ Meta & SEO
 
-You can create API routes by using the `server` property in your route definitions:
-
-```tsx
-import { createFileRoute } from '@tanstack/react-router'
-import { json } from '@tanstack/react-start'
-
-export const Route = createFileRoute('/api/hello')({
-  server: {
-    handlers: {
-      GET: () => json({ message: 'Hello, World!' }),
-    },
-  },
-})
-```
-
-## Data Fetching
-
-There are multiple ways to fetch data in your application. You can use TanStack Query to fetch data from a server. But you can also use the `loader` functionality built into TanStack Router to load the data for a route before it's rendered.
-
-For example:
+Edit the `head()` function in `src/routes/__root.tsx`:
 
 ```tsx
-import { createFileRoute } from '@tanstack/react-router'
-
-export const Route = createFileRoute('/people')({
-  loader: async () => {
-    const response = await fetch('https://swapi.dev/api/people')
-    return response.json()
-  },
-  component: PeopleComponent,
-})
-
-function PeopleComponent() {
-  const data = Route.useLoaderData()
-  return (
-    <ul>
-      {data.results.map((person) => (
-        <li key={person.name}>{person.name}</li>
-      ))}
-    </ul>
-  )
-}
+meta: [
+  { title: 'Your Site Title' },
+  { name: 'description', content: 'Your site description' },
+],
+links: [
+  { rel: 'icon', href: '/favicon.svg' },
+],
 ```
 
-Loaders simplify your data fetching logic dramatically. Check out more information in the [Loader documentation](https://tanstack.com/router/latest/docs/framework/react/guide/data-loading#loader-parameters).
+### 🧭 Navigation Links
 
-# Demo files
+Edit the `menuItems` array in `src/components/header.tsx`:
 
-Files prefixed with `demo` can be safely deleted. They are there to provide a starting point for you to play around with the features you've installed.
+```tsx
+const menuItems = [
+  { name: 'About', href: '#about' },
+  { name: 'Features', href: '#features' },
+  // Add more...
+]
+```
 
-# Learn More
+---
 
-You can learn more about all of the offerings from TanStack in the [TanStack documentation](https://tanstack.com).
+## 🤝 Contributing
 
-For TanStack Start specific documentation, visit [TanStack Start](https://tanstack.com/start).
+Contributions are welcome! Feel free to open an issue or submit a pull request.
+
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to the branch (`git push origin feature/amazing-feature`)
+5. **Open** a Pull Request
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+<div align="center">
+
+**Made with ❤️ by [Aswinsai](https://github.com/Aswinsaipalakonda)**
+
+⭐ Star this repo if you found it helpful!
+
+</div>
