@@ -1,118 +1,125 @@
 import { createFileRoute } from '@tanstack/react-router'
-import {
-  Zap,
-  Server,
-  Route as RouteIcon,
-  Shield,
-  Waves,
-  Sparkles,
-} from 'lucide-react'
+import HeroSection from '@/components/hero-section'
+import { ThemeProvider } from '@/components/theme-provider'
+import Features from '@/components/shadcn-studio/blocks/features-section/features-section'
+import { SwatchBookIcon, ShieldBanIcon, SearchIcon, StarIcon, SmartphoneIcon, LockKeyholeIcon } from 'lucide-react'
+import ContentSection from '@/components/content'
+import ChangelogContent, { type Release } from '@/components/shadcn-studio/blocks/timeline-component-05/timeline-component'
+import V1_1_0_Content from '@/components/shadcn-studio/blocks/timeline-component-05/content/v1_1_0'
+import V1_2_0_Content from '@/components/shadcn-studio/blocks/timeline-component-05/content/v1_2_0'
+import V1_3_0_Content from '@/components/shadcn-studio/blocks/timeline-component-05/content/v1_3_0'
+import AppIntegration from '@/components/shadcn-studio/blocks/app-integration/app-integration'
+import Pricing from '@/components/pricing'
+
+
+const featuresList = [
+  {
+    icon: SwatchBookIcon,
+    title: 'User-Friendly Interface',
+    description:
+      "Navigate effortlessly with our intuitive design, optimised for all devices. Enjoy a seamless experience whether you're on a computer or mobile.",
+    cardBorderColor: 'border-primary/40 hover:border-primary',
+    avatarTextColor: 'text-primary',
+    avatarBgColor: 'bg-primary/10'
+  },
+  {
+    icon: ShieldBanIcon,
+    title: 'Secure Checkout',
+    description:
+      'Enjoy a safe shopping experience with multiple payment options and SSL encryption. Your personal and financial information is always protected.',
+    cardBorderColor: 'border-green-600/40 hover:border-green-600 dark:border-green-400/40 dark:hover:border-green-400',
+    avatarTextColor: 'text-green-600 dark:text-green-400',
+    avatarBgColor: 'bg-green-600/10 dark:bg-green-400/10'
+  },
+  {
+    icon: SearchIcon,
+    title: 'Advanced Search',
+    description:
+      'Find products quickly with advanced filters, sorting options, and suggestion. Save time and effortlessly locate exactly what you need with ease.',
+    cardBorderColor: 'border-amber-600/40 hover:border-amber-600 dark:border-amber-400/40 dark:hover:border-amber-400',
+    avatarTextColor: 'text-amber-600 dark:text-amber-400',
+    avatarBgColor: 'bg-amber-600/10 dark:bg-amber-400/10'
+  },
+  {
+    icon: StarIcon,
+    title: 'Customer Reviews and Ratings',
+    description:
+      'Make informed decisions with detailed product reviews and ratings from other buyers. Trust the experiences of fellow shoppers to guide choices.',
+    cardBorderColor: 'border-destructive/40 hover:border-destructive',
+    avatarTextColor: 'text-destructive',
+    avatarBgColor: 'bg-destructive/10'
+  },
+  {
+    icon: SmartphoneIcon,
+    title: 'Mobile App Integration',
+    description:
+      'Enhance your shopping experience with our mobile app and push notifications. Stay updated on arrivals and exclusive offers directly on phone.',
+    cardBorderColor: 'border-sky-600/40 hover:border-sky-600 dark:border-sky-400/40 dark:hover:border-sky-400',
+    avatarTextColor: 'text-sky-600 dark:text-sky-400',
+    avatarBgColor: 'bg-sky-600/10 dark:bg-sky-400/10'
+  },
+  {
+    icon: LockKeyholeIcon,
+    title: 'Security Features',
+    description:
+      'Protect your data with fraud detection and two-factor authentication. Ensure a secure environment for all transactions and account activities.',
+    cardBorderColor: 'border-primary/40 hover:border-primary',
+    avatarTextColor: 'text-primary',
+    avatarBgColor: 'bg-primary/10'
+  }
+]
+export const releases: Release[] = [
+  {
+    version: 'v 1.3.0',
+    date: 'November 7, 2025',
+    content: <V1_3_0_Content />
+  },
+  {
+    version: 'v 1.2.0',
+    date: 'March 22, 2025',
+    content: <V1_2_0_Content />
+  },
+  {
+    version: 'v 1.1.0',
+    date: 'January 15, 2025',
+    content: <V1_1_0_Content />
+  }
+]
+const integrations = [
+  {
+    name: 'Microsoft',
+    description: 'Empowering Innovation and Connectivity',
+    image: 'https://cdn.shadcnstudio.com/ss-assets/brand-logo/microsoft-icon.png',
+    alt: 'Microsoft'
+  },
+  {
+    name: 'Spotify',
+    description: 'Your soundtrack to every moment.',
+    image: 'https://cdn.shadcnstudio.com/ss-assets/brand-logo/spotify-icon.png',
+    alt: 'Spotify'
+  },
+  {
+    name: 'Github',
+    description: 'Your Hub for Open Source Innovation',
+    image: 'https://cdn.shadcnstudio.com/ss-assets/brand-logo/github-white.png',
+    alt: 'Github'
+  }
+]
 
 export const Route = createFileRoute('/')({ component: App })
-
 function App() {
-  const features = [
-    {
-      icon: <Zap className="w-12 h-12 text-cyan-400" />,
-      title: 'Powerful Server Functions',
-      description:
-        'Write server-side code that seamlessly integrates with your client components. Type-safe, secure, and simple.',
-    },
-    {
-      icon: <Server className="w-12 h-12 text-cyan-400" />,
-      title: 'Flexible Server Side Rendering',
-      description:
-        'Full-document SSR, streaming, and progressive enhancement out of the box. Control exactly what renders where.',
-    },
-    {
-      icon: <RouteIcon className="w-12 h-12 text-cyan-400" />,
-      title: 'API Routes',
-      description:
-        'Build type-safe API endpoints alongside your application. No separate backend needed.',
-    },
-    {
-      icon: <Shield className="w-12 h-12 text-cyan-400" />,
-      title: 'Strongly Typed Everything',
-      description:
-        'End-to-end type safety from server to client. Catch errors before they reach production.',
-    },
-    {
-      icon: <Waves className="w-12 h-12 text-cyan-400" />,
-      title: 'Full Streaming Support',
-      description:
-        'Stream data from server to client progressively. Perfect for AI applications and real-time updates.',
-    },
-    {
-      icon: <Sparkles className="w-12 h-12 text-cyan-400" />,
-      title: 'Next Generation Ready',
-      description:
-        'Built from the ground up for modern web applications. Deploy anywhere JavaScript runs.',
-    },
-  ]
-
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
-      <section className="relative py-20 px-6 text-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
-        <div className="relative max-w-5xl mx-auto">
-          <div className="flex items-center justify-center gap-6 mb-6">
-            <img
-              src="/tanstack-circle-logo.png"
-              alt="TanStack Logo"
-              className="w-24 h-24 md:w-32 md:h-32"
-            />
-            <h1 className="text-6xl md:text-7xl font-black text-white [letter-spacing:-0.08em]">
-              <span className="text-gray-300">TANSTACK</span>{' '}
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                START
-              </span>
-            </h1>
-          </div>
-          <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
-            The framework for next generation AI applications
-          </p>
-          <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-8">
-            Full-stack framework powered by TanStack Router for React and Solid.
-            Build modern applications with server functions, streaming, and type
-            safety.
-          </p>
-          <div className="flex flex-col items-center gap-4">
-            <a
-              href="https://tanstack.com/start"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-colors shadow-lg shadow-cyan-500/50"
-            >
-              Documentation
-            </a>
-            <p className="text-gray-400 text-sm mt-2">
-              Begin your TanStack Start journey by editing{' '}
-              <code className="px-2 py-1 bg-slate-700 rounded text-cyan-400">
-                /src/routes/index.tsx
-              </code>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-6 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10"
-            >
-              <div className="mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold text-white mb-3">
-                {feature.title}
-              </h3>
-              <p className="text-gray-400 leading-relaxed">
-                {feature.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+    <div>
+      <>
+      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+        <HeroSection />
+        <ContentSection />
+        <Features featuresList={featuresList} />
+        <ChangelogContent releases={releases} />
+        <AppIntegration integrations={integrations} />
+        <Pricing />
+      </ThemeProvider>
+      </>
     </div>
   )
 }
