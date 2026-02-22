@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/badge'
 export interface Release {
   version: string
   date: string
-  content: ReactNode
+  content: ReactNode  
 }
 
 interface ChangelogContentProps {
@@ -15,10 +15,10 @@ interface ChangelogContentProps {
 const ChangelogContent = ({ releases }: ChangelogContentProps) => {
   return (
     <>
-      <div className='mb-8 space-y-4 text-center md:mb-10 lg:mb-18'>
-        <h2 className='text-2xl font-semibold tracking-tight md:text-3xl lg:text-4xl'>Changelog Origin Update</h2>
+      <div id="process" className='mb-8 space-y-4 text-center md:mb-10 lg:mb-18'>
+        <h2 className='text-2xl font-semibold tracking-tight md:text-3xl lg:text-4xl'>Our Process</h2>
         <p className='text-muted-foreground text-xl'>
-          Discover what’s been added, changed, fixed, improved, and updated in this release.
+          Here's how we work to deliver the best results for our clients.
         </p>
       </div>
       {releases.map((release, index) => (
