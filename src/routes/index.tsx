@@ -10,7 +10,9 @@ import V1_2_0_Content from '@/components/shadcn-studio/blocks/timeline-component
 import V1_3_0_Content from '@/components/shadcn-studio/blocks/timeline-component-05/content/v1_3_0'
 import AppIntegration from '@/components/shadcn-studio/blocks/app-integration/app-integration'
 import Pricing from '@/components/pricing'
-
+import CallToAction from '@/components/call-to-action'
+import Contact from '@/components/contact'
+import FooterSection from '@/components/footer'
 
 const featuresList = [
   {
@@ -118,6 +120,9 @@ function App() {
         <ChangelogContent releases={releases} />
         <AppIntegration integrations={integrations} />
         <Pricing />
+        <CallToAction />
+        <Contact />
+        <FooterSection />
       </ThemeProvider>
       </>
     </div>
